@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
-import GithubCorner from "./GithubCorner";
+import Head from 'next/head';
+import Link from 'next/link';
+import GithubCorner from './GithubCorner';
 
 export default function Layout(props) {
   return (
@@ -10,11 +10,11 @@ export default function Layout(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sanity + Next.js = 💖</title>
       </Head>
-      <nav>
-        <Link href="/">
+      <nav data-test="nav">
+        <Link href="/" data-test="movie">
           <a>Movies</a>
         </Link>
-        <Link href="/people">
+        <Link data-test="people" href="/people">
           <a>People</a>
         </Link>
       </nav>
@@ -25,11 +25,8 @@ export default function Layout(props) {
           <img src="/sanity-logo.svg" alt="Sanity Logo" />
         </a>
         +
-        <a href="https://github.com/zeit/next.js" alt="NextJs Logo" >
-          <img
-            className="next"
-            src="/nextjs-logo.svg"
-          />
+        <a href="https://github.com/zeit/next.js" alt="NextJs Logo">
+          <img className="next" src="/nextjs-logo.svg" />
         </a>
         = 💖
       </footer>
@@ -69,7 +66,7 @@ export default function Layout(props) {
       <style jsx global>{`
         body {
           margin: 0;
-          font-family: "Avenir", Helvetica, Arial, sans-serif;
+          font-family: 'Avenir', Helvetica, Arial, sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           color: #2c3e50;
