@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "cypress-run": "cypress run",
-    "int-test": "start-server-and-test next http://localhost:3000 cypress-run --browser chrome",
+    "int-test": "start-server-and-test next http://localhost:3000 cypress-run",
     "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
     "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
