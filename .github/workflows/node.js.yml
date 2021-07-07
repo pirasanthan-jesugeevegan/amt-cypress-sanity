@@ -24,3 +24,8 @@ jobs:
         run: npm install
       - name: Run Cypress tests
         run: npm run int-test
+      - name: Copy test execution videos and screenshots
+        run: |
+          mkdir public
+          cp -r cypress/videos public/videos
+          cp -r cypress/screenshots public/screenshots
