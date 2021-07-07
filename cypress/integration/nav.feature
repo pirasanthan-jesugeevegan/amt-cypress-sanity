@@ -9,9 +9,9 @@ Feature: Nav Function
         When the field '<elements>' is visible
         Then the field '<elements>' contains '<value>'
         Examples: elementName
-            | elementName | elements | value    |
-            | movie       | movie    | Movie    |
-            | people      | people   | Peopless |
+            | elementName | elements | value   |
+            | movie       | movie    | Movie   |
+            | people      | people   | Peoples |
 
     Scenario Outline: TC002 - Verify nav link navigate to the right page <elementName>
         Given the user navigates to '/'
