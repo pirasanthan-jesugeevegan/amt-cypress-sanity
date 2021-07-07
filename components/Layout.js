@@ -11,11 +11,11 @@ export default function Layout(props) {
         <title>Sanity + Next.js = 💖</title>
       </Head>
       <nav data-test="nav">
-        <Link href="/" data-test="movie">
-          <a>Movies</a>
+        <Link href="/">
+          <a data-test="movie">Movies</a>
         </Link>
-        <Link data-test="people" href="/people">
-          <a>People</a>
+        <Link href="/people">
+          <a data-test="people">People</a>
         </Link>
       </nav>
       <GithubCorner />
