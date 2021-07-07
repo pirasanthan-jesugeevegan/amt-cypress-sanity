@@ -20,25 +20,27 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install cypress and verify
+      - name: 🧰 Install cypress and verify
         run: npm install
-      - name: Run Cypress tests
+      - name: 🐛 Run Cypress tests
         run: npm run int-test
-      - name: Copy test execution videos and screenshots
+      - name: 🎞️ Copy test execution videos and screenshots
         run: |
           cp -r cypress/videos public/videos
           cp -r cypress/screenshots public/screenshots
-      - name: Merge test reports
+      - name: 📈 Merge test reports
         run: npm run combine:report
-      - name: Generate HTML report
+      - name: 🗄️ Generate HTML report
         run: npm run generate:report
 
-      - name: Deploy report page to GitHub Page
+      - name: 🚀 Deploy report page to GitHub Page
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-      - name: 'Deploy to Netlify'
+      - name: 📦 Build project
+        run: npm run build
+      - name: '🚀 Deploy to Netlify'
         uses: jsmrcaga/action-netlify-deploy@v1.1.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
