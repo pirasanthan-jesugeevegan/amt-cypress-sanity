@@ -1,5 +1,4 @@
 {
   "movie": "[data-test=movie]",
-  "people": "[data-test=people]",
-  "new": "[data-test=new]"
+  "people": "[data-test=people]"
 }
