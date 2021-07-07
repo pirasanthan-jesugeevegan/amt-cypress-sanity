@@ -1,0 +1,9 @@
+{
+    "video": true,
+    "screenshotOnRunFailure": true,
+    "defaultCommandTimeout": 60000,
+    "include": [
+        "./node_modules/cypress",
+        "cypress/**/*.js"
+    ]
+}
