@@ -1,0 +1,4 @@
+{
+  "movie": "[data-test=movie]",
+  "people": "[data-test=people]"
+}
