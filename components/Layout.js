@@ -54,7 +54,7 @@ export default function Layout(props) {
           top: 0;
           left: 0;
           width: 100%;
-          background-color: #9e0606;
+          background-color: #333;
           font-size: 1rem;
           height: 3.5rem;
         }
