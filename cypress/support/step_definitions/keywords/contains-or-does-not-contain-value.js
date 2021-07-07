@@ -1,4 +1,4 @@
-import * as selectors from './mappings-importer.js';
+import * as selectors from '../mappings-importer.js';
 
 Given(
   'the field {string} contains {string}',

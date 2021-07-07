@@ -1,4 +1,4 @@
-import * as selectors from './mappings-importer.js';
+import * as selectors from '../mappings-importer.js';
 
 const implementation = (elementKey, condition) => {
   const element = selectors[elementKey];

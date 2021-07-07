@@ -1,4 +1,4 @@
-import * as selectors from './mappings-importer.js';
+import * as selectors from '../mappings-importer';
 
 Given('the field {string} content is empty', (elementSelector) => {
   cy.get(selectors[elementSelector]).invoke('val').should('be.empty');
