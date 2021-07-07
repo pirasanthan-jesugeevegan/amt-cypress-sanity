@@ -1,5 +1,5 @@
 {
-    "video": true,
+    "video": false,
     "screenshotOnRunFailure": true,
     "defaultCommandTimeout": 60000,
     "include": [
