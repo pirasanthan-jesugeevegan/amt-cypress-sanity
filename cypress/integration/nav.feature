@@ -12,6 +12,7 @@ Feature: Nav Function
             | elementName | elements | value  |
             | movie       | movie    | Movie  |
             | people      | people   | People |
+            | new         | new      | New    |
 
     Scenario Outline: TC002 - Verify nav link navigate to the right page <elementName>
         Given the user navigates to '/'

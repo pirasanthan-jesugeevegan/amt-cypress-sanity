@@ -4,11 +4,11 @@
 name: Node.js CI
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+    branches: 
+      - 'master'
 jobs:
   build:
 
@@ -24,5 +24,22 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run int-test
+    - name: Install cypress and verify
+      run: npm install
+    - name: Run Cypress tests
+      run: npm run int-test
+    - name: Copy test execution videos and screenshots
+        run: |
+          mkdir public
+          cp -r cypress/videos public/videos
+          cp -r cypress/screenshots public/screenshots
+      - name: Merge test reports
+        run: npm run combine:report
+      - name: Generate HTML report
+        run: npm run generate:report
+
+      - name: Deploy report page to GitHub Page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
