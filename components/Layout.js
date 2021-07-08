@@ -17,6 +17,9 @@ export default function Layout(props) {
         <Link href="/people">
           <a data-test="people">People</a>
         </Link>
+        <Link href="/people">
+          <a data-test="new">New</a>
+        </Link>
       </nav>
       <GithubCorner />
       <div id="main">{props.children}</div>
