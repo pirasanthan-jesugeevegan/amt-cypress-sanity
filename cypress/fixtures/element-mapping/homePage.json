@@ -1,5 +1,7 @@
 {
   "movie": "[data-test=movie]",
   "people": "[data-test=people]",
-  "new": "[data-test=new]"
+  "new": "[data-test=new]",
+  "wall-e": ":nth-child(1) > a.jsx-251689666 > img.jsx-251689666",
+  "ben": ":nth-child(1) > .cast-list-link > :nth-child(1) > .jsx-2997941870"
 }
