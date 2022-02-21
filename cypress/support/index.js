@@ -15,6 +15,14 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands';
+import '@applitools/eyes-cypress/commands';
+
+beforeEach(() => {
+  cy.eyesOpen();
+});
+afterEach(() => {
+  cy.eyesClose();
+});
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
