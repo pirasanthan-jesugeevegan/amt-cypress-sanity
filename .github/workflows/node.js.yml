@@ -25,13 +25,12 @@ jobs:
         run: npm install
 
       - name: 🐛 Run Cypress tests
-        run: APPLITOOLS_API_KEY=${{ secrets.APPLITOOLS_API_KEY }} npm run int-test
+        run: npm run int-test
 
       - name: 🎞️ Copy test execution videos and screenshots
         run: |
           cp -r cypress/videos public/videos
           cp -r cypress/screenshots public/screenshots
-
       - name: 📈 Merge test reports
         run: npm run combine:report
 
