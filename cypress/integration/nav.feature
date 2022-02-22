@@ -18,6 +18,7 @@ Feature: Nav Function
         Given the user navigates to '/'
         When the user clicks on '<elements>'
         Then the url contains '<url>'
+        And the user screenshot the page '<url>' as '<elementName>'
         Examples: elementName
             | elementName | elements | url     |
             | people      | people   | /people |

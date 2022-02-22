@@ -10,6 +10,7 @@
 //
 //
 // -- This is a parent command --
+import '@percy/cypress';
 Cypress.Commands.add('selectActor', (actor) => {
   cy.get('.people').should((el) => {
     expect(el).to.contain(actor);
