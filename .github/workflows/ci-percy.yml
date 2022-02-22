@@ -2,7 +2,7 @@ name: Visual
 on:
   push:
     branches:
-      - 'percy'
+      - percy
 jobs:
   e2e:
     runs-on: ubuntu-latest
