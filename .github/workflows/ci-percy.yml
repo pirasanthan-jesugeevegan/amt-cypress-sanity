@@ -1,5 +1,10 @@
 name: Visual
-on: [push]
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches:
+      - 'percy'
 jobs:
   e2e:
     runs-on: ubuntu-latest
