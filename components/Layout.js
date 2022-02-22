@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import GithubCorner from './GithubCorner';
 
 export default function Layout(props) {
   return (
@@ -8,7 +7,7 @@ export default function Layout(props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Sanity + Next.js = 💖</title>
+        <title>Next.js & Sanity</title>
       </Head>
       <nav data-test="nav">
         <Link href="/">
@@ -21,18 +20,8 @@ export default function Layout(props) {
           <a data-test="new">New</a>
         </Link>
       </nav>
-      <GithubCorner />
       <div id="main">{props.children}</div>
-      <footer>
-        <a href="http://sanity.io">
-          <img src="/sanity-logo.svg" alt="Sanity Logo" />
-        </a>
-        +
-        <a href="https://github.com/zeit/next.js" alt="NextJs Logo">
-          <img className="next" src="/nextjs-logo.svg" />
-        </a>
-        = 💖
-      </footer>
+
       <style jsx>{`
         footer {
           padding: 5rem 1rem;
