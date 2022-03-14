@@ -11,8 +11,8 @@
     "int-test": "start-server-and-test next http://localhost:3000 cypress-run",
     "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
     "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
-    "percy": "PERCY_TOKEN=fe63e4ec176f1549ebf581a4320fea63b1250a2e5572ae8805d6e475d821ed8a npx percy exec -- cypress run",
-    "percy-off": "PERCY_TOKEN=fe63e4ec176f1549ebf581a4320fea63b1250a2e5572ae8805d6e475d821ed8a PERCY_ENABLE=0 npx percy exec -- cypress run"
+    "percy": "PERCY_TOKEN=8d9421f9b40d54154f6b4afc5ddbd3c9e2ae54272245744541a25997a4bd1e06 npx percy exec -- cypress run",
+    "percy-off": "PERCY_TOKEN=8d9421f9b40d54154f6b4afc5ddbd3c9e2ae54272245744541a25997a4bd1e06 PERCY_ENABLE=0 npx percy exec -- cypress run"
   },
   "keywords": [
     "cypress",
