@@ -8,7 +8,7 @@
     "build": "next build && next export",
     "start": "next start",
     "cypress-run": "cypress run",
-    "applitool": "APPLITOOLS_API_KEY=1p5Sbceiu4dsTio5zsZvaLtsTKIw1ivZC2FSz7gl4Qw110 start-server-and-test next http://localhost:3000 cypress-run",
+    "applitool": "APPLITOOLS_API_KEY=8LT4nf2CFFRTqfHCfXtch6RJ22ueBEZtGlXhp1TEboI110 start-server-and-test next http://localhost:3000 cypress-run",
     "no-applitool": "APPLITOOLS_IS_DISABLED=true start-server-and-test next http://localhost:3000 cypress-run",
     "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
     "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
